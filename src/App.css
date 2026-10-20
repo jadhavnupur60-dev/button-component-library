@@ -1,0 +1,87 @@
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f5f6ff;
+  color: #25243a;
+}
+
+.header {
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+  background: linear-gradient(135deg, #5b4bdb, #8c52db);
+}
+
+.header h1 {
+  margin: 0 0 12px;
+  font-size: 34px;
+}
+
+.header p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.demo {
+  max-width: 1000px;
+  margin: 35px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.demo-card,
+.message-card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(30, 30, 70, 0.08);
+}
+
+.demo-card h2,
+.message-card h2 {
+  margin-top: 0;
+}
+
+.demo-card p,
+.message-card p {
+  color: #66647a;
+  line-height: 1.6;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.message-card {
+  grid-column: 1 / -1;
+  border-left: 5px solid #5b4bdb;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #66647a;
+}
+
+@media (max-width: 650px) {
+  .demo {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 27px;
+  }
+
+  .message-card {
+    grid-column: auto;
+  }
+}
